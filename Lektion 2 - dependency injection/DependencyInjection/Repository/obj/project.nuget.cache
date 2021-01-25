@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "PWhN/7R+TU8mhV0ZK4DFJqnGPrL+dh3zPPoikq5mQjOyETVzSTIhxTvhVVpBW0RxzTVR17Y6IoacVZi74MmMig==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Micke\\Desktop\\EC-WIN20\\ASP.NET MVC\\Lektion 2 - dependency injection\\DependencyInjection\\Repository\\Repository.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Micke\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Micke\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

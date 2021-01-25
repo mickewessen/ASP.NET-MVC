@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "UFt2wIQsk6l3/goRrqhIr7U8O+tWJJwDl8y30P3YJYiX5zxmUeNNmm/0X0uQUoH2t1QZMuPgy38GZNyPSat7KQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Micke\\Desktop\\EC-WIN20\\ASP.NET MVC\\Lektion 2 - dependency injection\\AutoMapperDemo\\Repository\\Repository.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Micke\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Micke\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Micke\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Micke\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Micke\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
+    "C:\\Users\\Micke\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.7.0\\system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

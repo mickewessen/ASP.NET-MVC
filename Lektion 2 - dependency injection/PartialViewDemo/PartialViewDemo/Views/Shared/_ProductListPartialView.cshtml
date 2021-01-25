@@ -1,0 +1,16 @@
+﻿@model IEnumerable<PartialViewDemo.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+    @foreach (var item in Model)
+    {
+        @await Html.PartialAsync("_ProductCardPartialView", item)
+    }
+
+</div>

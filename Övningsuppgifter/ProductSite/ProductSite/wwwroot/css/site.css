@@ -1,0 +1,18 @@
+﻿#footer {
+    font-size: 1.2rem;
+    color: white;
+}
+
+#footer a{
+    color: white;
+    text-decoration: none;
+}
+
+.fa-trash {
+    color: red;
+}
+
+i {
+    font-size: 2rem;
+    color: gray;
+}

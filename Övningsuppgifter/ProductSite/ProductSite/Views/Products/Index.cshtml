@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ProductSite.Models.Product>
+    
+@{
+    ViewData["Title"] = "Index";
+}
+
+<partial name="_Carousel">
+
+    <div class="container marketing mt-5">
+
+
+        <div class="row">
+            @foreach (var item in Model)
+            {
+            <div class="col-lg-4 text-center">
+                <img src="/images/3080.png" class="rounded-circle"width="200" height="130">
+                <h2>@Html.DisplayFor(modelItem => item.ProductName)</h2>
+                <p>@Html.DisplayFor(modelItem => item.Description)</p>
+                <p><a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id" role="button">View details »</a></p>
+            </div>
+            }
+        </div>
+
+        <div>
+            @foreach (var item in Model)
+            {
+                <hr class="featurette-divider">
+
+                <div class="row featurette mb-5">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading">@Html.DisplayFor(modelItem => item.ProductName)</h2>
+                        <p class="lead">@Html.DisplayFor(modelItem => item.Description)</p>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="/images/3080.png" width="450" height="230">
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+

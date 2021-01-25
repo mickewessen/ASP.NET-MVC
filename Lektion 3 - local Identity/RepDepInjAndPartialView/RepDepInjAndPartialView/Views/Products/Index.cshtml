@@ -1,0 +1,9 @@
+﻿@model IEnumerable<RepDepInjAndPartialView.Models.ProductList>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@foreach (var item in Model) {
+   @await Html.PartialAsync("_ProductCarouselPartial", item) 
+}

@@ -1,0 +1,9 @@
+C:\Users\Micke\Desktop\EC-WIN20\ASP.NET MVC\Lektion 2 - dependency injection\DependencyInjection\Repository\bin\Debug\netstandard2.0\Repository.deps.json
+C:\Users\Micke\Desktop\EC-WIN20\ASP.NET MVC\Lektion 2 - dependency injection\DependencyInjection\Repository\bin\Debug\netstandard2.0\Repository.dll
+C:\Users\Micke\Desktop\EC-WIN20\ASP.NET MVC\Lektion 2 - dependency injection\DependencyInjection\Repository\bin\Debug\netstandard2.0\Repository.pdb
+C:\Users\Micke\Desktop\EC-WIN20\ASP.NET MVC\Lektion 2 - dependency injection\DependencyInjection\Repository\obj\Debug\netstandard2.0\Repository.csprojAssemblyReference.cache
+C:\Users\Micke\Desktop\EC-WIN20\ASP.NET MVC\Lektion 2 - dependency injection\DependencyInjection\Repository\obj\Debug\netstandard2.0\Repository.AssemblyInfoInputs.cache
+C:\Users\Micke\Desktop\EC-WIN20\ASP.NET MVC\Lektion 2 - dependency injection\DependencyInjection\Repository\obj\Debug\netstandard2.0\Repository.AssemblyInfo.cs
+C:\Users\Micke\Desktop\EC-WIN20\ASP.NET MVC\Lektion 2 - dependency injection\DependencyInjection\Repository\obj\Debug\netstandard2.0\Repository.csproj.CoreCompileInputs.cache
+C:\Users\Micke\Desktop\EC-WIN20\ASP.NET MVC\Lektion 2 - dependency injection\DependencyInjection\Repository\obj\Debug\netstandard2.0\Repository.dll
+C:\Users\Micke\Desktop\EC-WIN20\ASP.NET MVC\Lektion 2 - dependency injection\DependencyInjection\Repository\obj\Debug\netstandard2.0\Repository.pdb
