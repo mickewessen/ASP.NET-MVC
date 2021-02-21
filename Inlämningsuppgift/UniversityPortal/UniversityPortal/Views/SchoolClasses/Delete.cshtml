@@ -1,0 +1,30 @@
+﻿@model UniversityPortal.Entities.SchoolClass
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container">
+    <h1>Ta bort klass</h1>
+
+    <h5 class="mt-5">Är du säker att du vill ta bort denna klass?</h5>
+    <div>
+
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                Klassnamn
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ClassName)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Ta bort" class="btn btn-danger" /> |
+            <a asp-action="Index">Tillbaka</a>
+        </form>
+    </div>
+</div>
+

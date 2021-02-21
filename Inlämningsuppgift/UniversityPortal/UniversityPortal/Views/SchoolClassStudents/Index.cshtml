@@ -1,0 +1,46 @@
+﻿@model IEnumerable<UniversityPortal.Entities.SchoolClassStudent>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <h1>Lägg till elev till klass</h1>
+
+    <p>
+        <a class="btn custombutton" asp-action="Create">Lägg till</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Klassnamn
+                </th>
+                <th>
+                    Elev
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SchoolClass.ClassName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentId)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.StudentId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.StudentId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.StudentId">Delete</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+

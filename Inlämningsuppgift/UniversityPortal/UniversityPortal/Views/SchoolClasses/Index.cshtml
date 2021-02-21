@@ -1,0 +1,52 @@
+﻿@model IEnumerable<UniversityPortal.Entities.SchoolClass>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div id="schoolclass-index" class="container">
+    <h1>Klasser</h1>
+    <div class="create-class-buttons text-center">
+        <p>
+            <a asp-action="Create" class="btn custombutton">Skapa ny skolklass</a>
+        </p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        @foreach (var item in Model)
+        {
+            <div class="card-classes text-center">
+                <div class="card-header">
+                    @Html.DisplayFor(modelItem => item.ClassName)
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Lärare</h5>
+                    <p class="card-text">
+                        @Html.DisplayFor(modelItem => item.Teacher.DisplayName)
+                    </p>
+                    <h5 class="card-title">Kurser</h5>
+                    @Html.DisplayFor(modelItem => item.SchoolClassCourses)
+
+                    <h5 class="card-title">Elever</h5>
+                    @Html.DisplayFor(modelItem => item.SchoolClassStudents)
+
+                </div>
+                <div class="schoolclass-buttons">
+                    <a asp-action="Edit" asp-route-id="@item.Id">Uppdatera</a> |
+                    <a asp-controller="SchoolClassStudents" asp-action="Index">Lägg till elev</a> |
+                    <a asp-controller="SchoolCourses"  asp-action="Index">Lägg till kurser</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detaljer</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Ta bort</a>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <div>Startdatum: @String.Format("{0:yyyy/MM/dd}", item.ClassStart)</div>
+                    <div>Examination: @String.Format("{0:yyyy/MM/dd}", item.ClassEnd)</div>
+                </div>
+
+            </div>
+        }
+
+    </div>
+</div>
+

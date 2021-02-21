@@ -1,0 +1,279 @@
+body {
+	font-size: 1rem;
+    line-height: 1.52;
+    color: #717f86;
+    font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+ol, ul {
+	list-style: none;
+}
+
+.section-padding{
+	padding: 60px 0px;
+}
+
+a{
+    color: #5fcf80;
+}
+a:hover, a:focus{
+    color: #5fcf80;
+}
+
+
+
+
+/***********************************
+Banner
+************************************/
+.banner {
+    background-size: cover;
+    min-height: 580px;
+    position: relative;
+}
+
+.bg-color{
+	background-color: RGBA(12, 11, 11, 0.82);
+	min-height: 580px;
+}
+
+.text-dec{
+	font-size: 24px;
+	padding: 10px 20px;
+    margin: 15px 0;
+	text-transform: uppercase;
+    color: #fff;
+}
+.text-border{
+	border: 5px solid #5FCF80;
+	display: inline-block;
+	margin-top: 150px;
+}
+.intro-para{
+	font-family: 'Alegreya Sans', sans-serif;
+	font-size: 45px;
+	color: #fff;
+	margin-top: 30px;
+}
+
+.intro-para a{
+    color:#5FCF80; 
+}
+
+.modal-dialog {
+    width: 600px;
+    margin: 150px auto;
+}
+.mouse {
+    width: 25px;
+    height: 45px;
+    border: 2px solid #5FCF80;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -12.5px;
+    border-radius: 12px;
+}
+
+.padleft-right{
+    padding-left: 5px;
+    padding-right: 0px;
+}
+.big-text{
+    font-size: 35px;
+}
+.small-text{
+    font-size: 16px;
+}
+
+.get-quote {
+    color: #5FCF80;
+}
+
+
+/***********************************
+Features
+************************************/
+
+h2{
+	font-size: 1.5rem;
+	padding-bottom: 1rem;
+}
+.bottom-line{
+	width: 100%;
+	height: 3px;
+	background-color: rgb(99, 122, 145);
+}
+
+.feature-info {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.fea{
+	margin-top: 1.6rem;
+}
+
+
+
+.fea-img {
+  width: auto;
+}
+
+.heading {
+    width: 80%;
+}
+.fea i {
+    font-size: 2.4rem;
+    color: #5FCF80;
+    margin-top: 7px;
+}
+.heading h4 {
+    font-size: 1rem;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #000;
+
+}
+
+/***********************************
+ Organisations
+************************************/
+#organisations{
+    background-color: rgb(247, 247, 247);
+}
+
+
+.orga-stru
+{
+    background-color: #5FCF80;
+    height: auto;
+    padding: 10px 10px 25px 10px;
+    text-align: center;
+    border-radius: 0px 80px 99px 99px;
+    -moz-border-radius: 0px 80px 99px 99px;
+    -webkit-border-radius: 0px 80px 99px 99px;
+    -o-border-radius: 0px 80px 99px 99px;
+    margin-right: 1rem;
+    width: 8rem;
+    height: 20rem;
+}
+.orga-stru h3 {
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+}
+.orga-stru p {
+    font-size: 14px;
+    color: white;
+    font-weight: normal;
+    line-height: 20px;
+    padding-top: 15px;
+}
+.orga-stru i
+{
+    font-size: 150px;
+    margin-top: 35px;
+    color: rgb(255, 255, 255);
+}
+h3.det-txt {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+h4.sm-txt {
+    color: #5FCF80;
+    font-size: 24px;
+}
+p.det-p {
+    padding: 40px 0px;
+}
+#pricing{
+    background: rgb(247, 247, 247);
+}
+
+/***********************************
+Student testominals
+************************************/
+
+#university-member img {
+    border-radius: 50%;
+    width: 16rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+#university-member .pm-staff-profile-name {
+    font-weight: bold;
+}
+
+/* University facts */
+
+#services {
+    background-color: #f7f7f7;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+#services .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:        "ti ti ti"
+                                "b1 b2 b3"
+                                "b4 b5 b6"
+                                "b7 b8 b9";
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;        
+}
+
+.service-box {
+    background-color: #5FCF80;
+    font-family: 'Roboto Slab', serif;  
+    color: white;
+    padding-top: 1rem; 
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 10px;
+}
+
+.service-box:hover {
+    background-color: #299249;
+}
+
+.service-box i {
+    font-size: 3rem;
+}
+
+#university-title {
+    grid-area: ti;
+}
+#service-box-1 {
+    grid-area: b1;    
+}
+#service-box-2 {
+    grid-area: b2;
+}
+#service-box-3 {
+    grid-area: b3;
+}
+#service-box-4 {
+    grid-area: b4;
+}
+#service-box-5 {
+    grid-area: b5;
+}
+#service-box-6 {
+    grid-area: b6;
+}
+#service-box-6 {
+    grid-area: b7;
+}
+#service-box-6 {
+    grid-area: b8;
+}
+#service-box-6 {
+    grid-area: b9;
+}

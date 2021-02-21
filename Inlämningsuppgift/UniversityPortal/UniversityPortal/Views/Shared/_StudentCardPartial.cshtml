@@ -1,0 +1,37 @@
+﻿@model IEnumerable<UserViewModel>
+
+<div>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        @foreach (var user in Model)
+        {
+            if (user.Roles.Contains("Student"))
+            {
+                <div id="student" class="col text-center" style="width:20rem">
+                    <div class="card">
+                        <img class="card-img-top img-circle rounded-circle" src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1280px-SpongeBob_SquarePants_character.svg.png" alt="Card image cap">
+
+                        <div class="card-block container">
+                            <h4 class="card-title">@user.FirstName @user.LastName</h4>
+                            <p class="card-text">@user.Email</p>
+                            @foreach (var role in user.Roles)
+                            {
+                                <span class="card-position mr-1">@role </span>
+                            }
+
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-2">
+                            <a asp-action="Update" asp-route-id="@user.Id" class="btn"><i class="fas fa-pen-square"></i></a>
+                            <form asp-action="Delete" asp-route-id="@user.Id" method="post">
+                                <button type="submit" class="btn"><i class="fas fa-trash"></i></button>
+                            </form>
+                        </div>
+ 
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>
+
+

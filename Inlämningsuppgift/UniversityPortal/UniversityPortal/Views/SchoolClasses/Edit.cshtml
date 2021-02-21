@@ -1,0 +1,52 @@
+﻿@model UniversityPortal.Entities.SchoolClass
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container">
+    <h1>Uppdatera klass</h1>
+
+    <h4>Skolklass</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <label asp-for="ClassName" class="form-label">Klassnamn</label>
+                    <input asp-for="ClassName" class="form-control" />
+                    <span asp-validation-for="ClassName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TeacherId" class="form-label">Välj en lärare</label>
+                    @Html.DropDownListFor(m => m.TeacherId, new SelectList(ViewBag.Teachers, "Id", "DisplayName"), "Välj en lärare", new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label asp-for="SchoolClassStudents" class="form-label">Välj elev/er</label>
+                    @Html.DropDownListFor(m => m.SchoolClassStudents, new SelectList(ViewBag.Students, "Id", "DisplayName"), "Välj elever", new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label asp-for="ClassStart" class="form-label">Klasstart</label>
+                    <input asp-for="ClassStart" class="form-control" />
+                    <span asp-validation-for="ClassStart" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ClassEnd" class="form-label">Examination</label>
+                    <input asp-for="ClassEnd" class="form-control" />
+                    <span asp-validation-for="ClassEnd" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Spara" class="btn custombutton" />
+                    <a asp-action="Index" class="btn custombutton">Tillbaka</a>
+                </div>                
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

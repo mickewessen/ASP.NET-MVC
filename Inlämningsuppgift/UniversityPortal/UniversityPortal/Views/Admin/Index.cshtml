@@ -1,0 +1,29 @@
+﻿@model IEnumerable<UserViewModel>
+
+<div id="all-users">
+    <div class="container">
+        <div class="text-center">
+            <h1>Användare</h1>
+            <a asp-action="Create" class="btn custombutton">Skapa ny användare</a>
+        </div>
+
+        <div class="teacher-row">
+            <h2>Lärare</h2>
+            <partial name="_TeacherCardPartial" />
+        </div>
+
+        <div class="student-row">
+            <h2>Elever</h2>
+            <partial name="_StudentCardPartial" />
+        </div>
+
+        <div class="user-row">
+            <h2>Användare som inte tillhör en roll</h2>
+            <partial name="_TableCardPartial" />
+        </div>
+    </div>
+</div>
+
+
+
+

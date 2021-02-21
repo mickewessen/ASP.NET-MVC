@@ -1,0 +1,43 @@
+﻿@model List<UserRolesViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="add-role-to-user">
+        <div class="text-center">
+            <h1>Lägg till användare till roll</h1>
+            <a class="btn custombutton mt-3" asp-controller="RoleManager" asp-action="Index">Skapa ny användarroll</a>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Namn</th>
+                    <th>E-postadress</th>
+                    <th>Roll</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>@user.DisplayName</td>
+                        <td>@user.Email</td>
+                        <td>@string.Join(" , ", user.Roles.ToList())</td>
+                        <td>
+                            <a class="btn custombutton" asp-controller="UserRoles" asp-action="Edit" asp-route-userId="@user.UserId">Lägg till / ta bort</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+
+
+

@@ -1,0 +1,51 @@
+﻿@model List<IdentityRole>
+@{
+    ViewData["Title"] = "Role Manager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="create-new-role" class="container">
+    <h1>Roller</h1>
+    <form method="post" asp-action="AddRole" asp-controller="RoleManager">
+        <div class="form-group d-flex">
+            <div>
+                <label for="roleName" class="form-label">
+                    Skapa ny roll
+                </label>
+                <input name="roleName" class="form-control">
+                <button class="btn custombutton mt-3">Lägg till</button>
+            </div>           
+            <div>
+                
+            </div>
+        </div>
+    </form>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Rollnamn</th>
+                <th>Kopplade användare</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var role in Model)
+            {
+                <tr>
+                    <td>@role.Name</td>
+                    <td>*Lägg till namn senare</td>
+                    <td>
+                        <form asp-action="Delete" asp-route-id="@role.Id" method="post">
+                            <button type="submit" class="btn"><i class="fas fa-trash"></i></button>
+                        </form>
+                    </td>
+                </tr>
+
+            }
+        </tbody>
+        </table>
+
+    <a asp-controller="UserRoles" asp-action="Index"  class="btn custombutton" style="width:auto">Tillbaka</a>
+</div>
+
+

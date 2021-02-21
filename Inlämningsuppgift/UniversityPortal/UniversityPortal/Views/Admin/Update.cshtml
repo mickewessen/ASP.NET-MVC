@@ -1,0 +1,44 @@
+﻿@model ApplicationUser
+<div class="container">
+    <h1>Uppdatera användare</h1>
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <form asp-action="Update" class="row g-3" method="post">
+        <div class="form-group">
+            <label asp-for="FirstName">Förnamn</label>
+            <input asp-for="FirstName" class="form-control" />
+            <span asp-validation-for="FirstName" class="text-danger"></span>
+
+        </div>    <div class="form-group">
+            <label asp-for="LastName">Efternamn</label>
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+
+        </div>
+        <div class="form-group">
+            <label asp-for="Email">E-postadress</label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PhoneNumber">Telefonnummer (valfritt)</label>
+            <input asp-for="PhoneNumber" class="form-control" />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Lösenord</label>
+            <input name="password" class="form-control" />
+        </div>
+
+        <div>
+            <button type="submit" class="btn custombutton">Spara</button>
+            <a asp-action="Index" class="btn custombutton"> Tillbaka</a>
+        </div>
+
+    </form>
+    
+    
+</div>
+

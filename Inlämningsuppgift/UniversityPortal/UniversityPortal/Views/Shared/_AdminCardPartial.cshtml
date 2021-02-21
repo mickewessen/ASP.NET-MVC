@@ -1,0 +1,31 @@
+﻿@model IEnumerable<UserViewModel>
+
+<div>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        @foreach (var user in Model)
+        {
+            if (user.Roles.Contains("Admin"))
+            {
+                <div id="admincard" class="col" style="width:20rem">
+                    <div class="card text-center">
+                        <img class="card-img-top img-circle rounded-circle" src="https://dummyimage.com/100x100/000/fff" alt="Card image cap">                        
+                        <div class="card-block container"> 
+                            <h4 class="card-title">@user.FirstName @user.LastName</h4>
+                            <p class="card-text">@user.Email</p>
+                            @foreach (var role in user.Roles)
+                            {
+                                <span class="card-position mr-1">@role </span>
+                            }
+                            <div class="d-flex mt-2">
+                                <a class="btn btn-sm btn-primary" asp-action="Update" asp-route-id="@user.Id">Uppdatera</a>
+                                <form asp-action="Delete" asp-route-id="@user.Id" method="post">
+                                    <button type="submit" class="btn btn-sm btn-danger">Ta bort</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

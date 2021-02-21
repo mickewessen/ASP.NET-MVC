@@ -1,0 +1,50 @@
+﻿@model UniversityPortal.Entities.SchoolClass
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <h1>Skapa ny klass</h1>
+
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="ClassName" class="control-label">Klassnamn</label>
+                    <input asp-for="ClassName" class="form-control" />
+                    <span asp-validation-for="ClassName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TeacherId" class="control-label">Lärare</label>
+                    @Html.DropDownListFor(m=>m.TeacherId, new SelectList(ViewBag.Teachers, "Id","DisplayName"), "Välj en lärare", new { @class ="form-control"})
+                </div>
+                <div class="form-group">
+                    <label asp-for="ClassStart" class="control-label">Klasstart</label>
+                    <input asp-for="ClassStart" class="form-control" />
+                    <span asp-validation-for="ClassStart" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ClassEnd" class="control-label">Examination</label>
+                    <input asp-for="ClassEnd" class="form-control" />
+                    <span asp-validation-for="ClassEnd" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Skapa" class="btn custombutton" />
+                    <a class="btn custombutton" asp-action="Index">Tillbaka</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
